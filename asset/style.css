@@ -1,0 +1,506 @@
+:root{
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#333;
+    --menu-color:#f04e23;
+    --price-color:#fc2330;
+}	
+
+*{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%; /*10px*/
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.main{
+	overflow: hidden;
+}
+
+									/*--------------header__navbar-----------*/
+.header__navbar{
+	margin: 10px 15px 0 0;
+	width: 100%;
+    text-align: right;
+    line-height: 25px;
+}
+.header__navbar .fas{
+	font-size: 1.4rem;
+}
+.header__navbar .phone{
+	padding-right: 20px;
+	font-size: 1.4rem;
+}
+.header__navbar .add{
+	font-size: 1.4rem;
+}
+.header__main{
+	max-width: 100%;
+	background: var(--menu-color);
+	height: 70px;
+	overflow: hidden;
+}
+.header__logo{
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo{
+	line-height: 70px;
+}
+.search{
+	margin-left: 10px;
+	transform: translateY(20%);
+}
+.search input {
+	position: relative;
+	padding: 8px 0;
+	width: 200px;
+	border-radius: 7px;
+	border:1px solid rgba(0,0,0,0.1);
+	transform: translateX(-10px);
+	
+}
+.search .fas {
+	transform: translateX(-75px);
+	font-size: 1.7rem;
+	position: absolute;
+	top: 10px;
+	left: 120%;
+}
+.choose{
+	line-height: 70px;
+}
+.choose-list{
+	display: flex;
+	list-style: none;
+}
+.choose-link:hover{
+	background: #fff;
+	color: var(--text-color);
+}
+.choose-link{
+    padding: 24px 21px 25px;
+	text-decoration: none;
+	font-size:1.8rem;
+	color: var(--white-color);
+		/*line-height: 2.5rem;*/
+}
+.menu-mobile{
+	display: none;
+	position: relative;
+    top: 18px;
+    left: -7%;
+}
+.menu-mobile img {
+	width: 40px;
+	height: 40px;
+}
+
+.search-mobile{
+	line-height: 80px;
+    margin-right: -9%;
+    display: none;
+}
+
+.search-mobile .fas{
+	font-size: 30px;
+	color: #fff;
+}
+
+/*slide*/
+.slideshow {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  padding-top: 15px;
+}
+.slideshow:hover .next {
+	display: block;
+}
+.slideshow:hover .prev {
+	display: block;
+}
+.mySlides {
+  display: none;
+}
+
+.mySlides:first-child {
+  display: block;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  display: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 168px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background: rgba(0,0,0,0.5);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+								/*-------------------product1----------------*/
+.product1{
+	padding-top: 20px;
+	position: relative;
+}
+
+.product1__title{
+	text-align: center;	
+}
+
+.product1__title::before{
+	 content: "";
+    display: block;
+    position: absolute;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    width: 30%;
+    top: 29px;
+}
+.product1__title::after{
+	content: "";
+    display: block;
+    position: absolute;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+   transform: translateX(-90px);
+    width: 30%;
+    top: 29px;
+    right: 80px;
+}
+							/*-------------------vali------------------------*/
+.product1-vali{
+	margin-top: 80px;
+	position: relative;
+	padding: 30px 0;
+}
+.product1-vali:hover{
+	border:1px solid rgba(0,0,0,0.2);
+	/*padding: 0;*/
+}
+.product1-vali__title{
+	margin-top: 10px;
+}
+.product1-vali__title span {
+	font-size: 1.7rem;
+	color: var(--text-color);
+}
+.product-vali__price{
+	margin:10px 35px 0  ;
+}
+.product-vali__price .price-old{
+	font-size: 1.5rem;
+	color: var(--price-color);
+	font-weight: 500;
+}
+.product-vali__price .price-new{
+	font-size: 1.5rem;
+	color: var(--text-color);
+	font-weight: 500;
+	 text-decoration: line-through;
+}
+.product-vali__sale span{
+	background: var(--menu-color);
+	font-size: 1.3rem;
+	font-weight: 400;
+	border-radius: 5px;
+	padding: 3px;
+	position: absolute;	
+	bottom: 100px;
+	color: var(--white-color);
+}
+			/*--------------product2------------*/
+.product2{
+	padding-top: 20px;
+	position: relative;
+}
+.product1__title1{
+	text-align: center;	
+}
+
+.product1__title1::before{
+	 content: "";
+    display: block;
+    position: absolute;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    width: 34%;
+    top: 29px;
+}
+.product1__title1::after{
+	content: "";
+    display: block;
+    position: absolute;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+   transform: translateX(-90px);
+    width: 33%;
+    top: 29px;
+    right: 80px;
+}
+.product-vali__ex span {
+	font-size: 1.5rem;
+	font-weight: 400;
+	padding: 3px;
+	position: absolute;	
+	bottom: 80px;
+	color: var(--white-color);
+	background: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 30px;
+	display: block;
+	text-align: center;
+	line-height: 2.6rem;
+}
+/*Tui xach*/
+.product1__title2{
+	text-align: center;	
+}
+
+.product1__title2::before{
+	 content: "";
+    display: block;
+    position: absolute;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    width: 33%;
+    top: 29px;
+}
+.product1__title2::after{
+	content: "";
+    display: block;
+    position: absolute;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+   transform: translateX(-90px);
+    width: 32%;
+    top: 29px;
+    right: 80px;
+}
+/*tin tuc*/
+.product1__title3{
+	text-align: center;	
+}
+.product1__title3::before{
+	 content: "";
+    display: block;
+    position: absolute;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    width: 37%;
+    top: 29px;
+}
+.product1__title3::after{
+	content: "";
+    display: block;
+    position: absolute;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+   transform: translateX(-90px);
+    width: 36%;
+    top: 29px;
+    right: 80px;
+}
+.product2__text1{
+	display: flex;
+	padding-bottom: 20px;
+	position: relative;
+}
+.product2__text1 img{
+	width: 200px;
+}
+
+.product2__text1 span {
+	position: absolute;
+    bottom: 40px;
+    left: 35%;
+    font-size: 1.5rem;
+
+
+}
+
+.product2__img img{
+	width: 98%;
+}
+
+.product2__img , .product2__box{
+	margin-top: 50px;
+}
+
+.product2__text2{
+	display: flex;
+	position: relative;
+}
+
+.product2__text1 p , .product2__text2 p{
+	font-size: 2rem;
+	line-height: 2.5rem;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; 
+   
+}
+
+.product2__text2 span {
+	position: absolute;
+    bottom: 25px;
+    left: 35%;
+    font-size: 1.5rem;
+}
+.product2__text2 img{
+	width: 200px;
+}
+.star{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+.star__title{
+	text-align: center;
+	padding: 50px;
+}
+.feedback img {
+	width: 98%;
+}
+.feedback p{
+	font-size: 2rem;
+	line-height: 3rem;
+
+}
+
+
+
+								/*------------------------footer-----------------------*/
+.footer{
+	margin: 20px 0;
+}
+
+/*footer__reputation*/
+.footer__reputation{
+	background: #ef530a;
+	padding: 10px 0;
+	position: relative;
+}
+
+.reputation--col{
+	display: flex;
+	align-items: center;
+}
+.reputation--col:first-child .reputation--col::before {
+	display: none;
+}
+.reputation--col::before{
+	content: "";
+	display: block;
+	position: absolute;
+	border-left: 1px solid #fff;
+   transform: translateX(-25px);
+    height: 100%;
+    top: 0px;
+}
+
+.reputation--col__text{
+	margin-left: 10px;
+	font-size: 1.4rem;
+}
+
+
+/*main--col*/
+
+.main--col{
+	padding: 20px 0;
+}
+
+.main--col__list{
+	list-style: none;
+}
+
+.main--col__item span{
+	display: block;
+}
+
+.main--col__header{
+	font-size: 12px;
+	margin:20px 0;
+}
+
+.main--col__link{
+	text-decoration: none;
+	font-size: 20px;
+	color: #ef530a;
+}
+
+.main--col__links{
+	margin: 10px 0;
+	text-decoration: none;
+	font-size: 16px;
+	color: #000;
+	padding: 5px 0;
+	line-height: 30px;
+}
+
+.main--col__links:hover{
+	color: #ef530a;
+}
+
+
+.main--social .fab{
+	font-size: 40px;
+	margin-left: 10px;
+}
+
+.main--img h5 {
+	font-size: 14px;
+	margin: 10px 0;
+}

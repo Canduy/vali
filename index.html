@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./asset/style.css">
+	<link rel="stylesheet" href="./asset/grid.css">
+	<link rel="stylesheet" href="./asset/responsive.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
+	<link rel="stylesheet" href="./asset/fontawesome-free-5.15.1-web/fontawesome-free-5.15.1-web/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+	<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+			      slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+			      dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active";
+			}
+</script>
+
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<div class="grid wide">
+				<div class="row">
+					<div class="header__navbar hide-on-mobile-tablet">
+						<i class="fas fa-phone"></i><span class="phone">Hotline:18008198(Miễn phí)</span>
+						<i class="fas fa-map-marker-alt"></i><span class="add">Hệ thống siêu thị MIA.vn</span>
+					</div>
+				</div>
+			</div>
+			<div class="header__main">
+				<div class="grid wide">
+					<div class="header__logo">
+						<div class="menu-mobile">
+							<img src="./asset/img/menu.png"  onclick="menutoggle()" alt="">
+						</div>
+						<div class="logo ">
+							<a href=""><img src="https://mia.vn/assets/img/logo.png" alt=""></a>
+						</div>
+						<div class="search hide-on-mobile-tablet">
+							<input type="text" name="" id="" placeholder="Bạn tìm sản phẩm gì....">
+							<i class="fas fa-search"></i>
+						</div>	
+						<div class="choose " >
+							<ul class="choose-list" id="MenuItems">
+								<li class="choose-item">
+									<a href="" class="choose-link">
+										Vali
+									</a>
+								</li>
+								<li class="choose-item">
+									<a href="" class="choose-link">
+										Balo
+									</a>
+								</li>
+								<li class="choose-item">
+									<a href="" class="choose-link">
+										Túi sách
+									</a>
+								</li>
+								<li class="choose-item">
+									<a href="" class="choose-link">
+										Phụ kiện
+									</a>
+								</li>
+								<li class="choose-item">
+									<a href="" class="choose-link">
+										Hàng mới về
+									</a>
+								</li>
+								<li class="choose-item">
+									<a href="" class="choose-link">
+										Sale 50%
+									</a>
+								</li>
+								<li class="choose-item">
+									<a href="" class="choose-link">
+										Block
+									</a>
+								</li>
+								<li class="choose-item">
+									<a href="" class="choose-link">
+										Vali
+									</a>
+								</li>
+
+
+							</ul>
+						</div>
+						<div class="search-mobile">
+							<i class="fas fa-search"></i>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div class="slideshow">
+			<div class="grid wide">
+					<div class="mySlides fade">
+						<img src="./asset/img/slide3.jpg" style="width:100%">
+					</div>
+					<div class="mySlides fade">
+						<img src="./asset/img/slide1.jpg" style="width:100%">
+	                </div>
+					<div class="mySlides fade">
+						<img src="./asset/img/slide2.jpg" style="width:100%">
+					</div>
+					
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					<br>
+					<div style="text-align:center">
+					  <span class="dot" onclick="currentSlide(1)"></span> 
+					  <span class="dot" onclick="currentSlide(2)"></span> 
+					  <span class="dot" onclick="currentSlide(3)"></span> 
+					</div>
+			</div>
+		</div>
+		<div class="product1">
+			<div class="grid wide">
+				<div class="product1__title">
+					<h2>TOP 15 SẢN PHẨM BÁN CHẠY NHẤT</h2>
+				</div>
+				<div class="row no-gutters">
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/vali1.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Kakashi Lumi ZS9613_20 S Coral</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">1.499.000đ</span>
+								<span class="price-new">1.499.000đ</span>
+							</div>
+							<div class="product-vali__sale">
+								<span>46%</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/vali2.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Beatas JP20_20 S Black</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">2.690.000đ</span>
+								<span class="price-new">4.580.000đ</span>
+							</div>
+							<div class="product-vali__sale">
+								<span>26%</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/vali3.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Kakashi Lumi ZS9613_20 S Coral</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">1.499.000đ</span>
+								<span class="price-new">1.499.000đ</span>
+							</div>
+							<div class="product-vali__sale">
+								<span>36%</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/vali4.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Kakashi Lumi ZS9613_20 S Coral</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">1.499.000đ</span>
+								<span class="price-new">1.499.000đ</span>
+							</div>
+							<div class="product-vali__sale">
+								<span>26%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="product2">
+			<div class="grid wide">
+				<div class="product1__title1">
+					<h2>VALI NỔI BẬT NHẤT</h2>
+				</div>
+				<div class="row no-gutters">
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/vali-noibat1.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Kakashi Lumi ZS9613_20 S Coral</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">1.499.000đ</span>
+								<span class="price-new">1.499.000đ</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/vali-noibat2.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Beatas JP20_20 S Black</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">2.690.000đ</span>
+								<span class="price-new">4.580.000đ</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/vali-noibat3.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Kakashi Lumi ZS9613_20 S Coral</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">1.499.000đ</span>
+								<span class="price-new">1.499.000đ</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/vali-noibat4.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Kakashi Lumi ZS9613_20 S Coral</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">1.499.000đ</span>
+								<span class="price-new">1.499.000đ</span>
+							</div>
+							<div class="product-vali__sale">
+								<span>26%</span>
+							</div>
+							<div class="product-vali__ex">
+								<span>Chỉ bán tại cửa hàng</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="product2">
+			<div class="grid wide">
+				<div class="product1__title1">
+					<h2>BALO NỔI BẬT NHẤT</h2>
+				</div>
+				<div class="row no-gutters">
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/balo1.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Kakashi Lumi ZS9613_20 S Coral</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">1.499.000đ</span>
+								<span class="price-new">1.499.000đ</span>
+							</div>
+							<div class="product-vali__sale">
+								<span>26%</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/balo2.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Beatas JP20_20 S Black</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">2.690.000đ</span>
+								<span class="price-new">4.580.000đ</span>
+							</div>
+							<div class="product-vali__sale">
+								<span>26%</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/balo3.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Kakashi Lumi ZS9613_20 S Coral</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">1.499.000đ</span>
+								<span class="price-new">1.499.000đ</span>
+							</div>
+							<div class="product-vali__sale">
+								<span>26%</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/balo4.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Kakashi Lumi ZS9613_20 S Coral</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">1.499.000đ</span>
+								<span class="price-new">1.499.000đ</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="product1">
+			<div class="grid wide">
+				<div class="product1__title2">
+					<h2>TÚI XÁCH NỔI BẬT NHẤT</h2>
+				</div>
+				<div class="row no-gutters">
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/tuixach1.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Kakashi Lumi ZS9613_20 S Coral</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">1.499.000đ</span>
+								<span class="price-new">1.499.000đ</span>
+							</div>
+							<div class="product-vali__sale">
+								<span>26%</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/tuixach2.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Beatas JP20_20 S Black</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">2.690.000đ</span>
+								<span class="price-new">4.580.000đ</span>
+							</div>
+							<div class="product-vali__sale">
+								<span>26%</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/tuixach3.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Kakashi Lumi ZS9613_20 S Coral</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">1.499.000đ</span>
+								<span class="price-new">1.499.000đ</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/tuixach4.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Kakashi Lumi ZS9613_20 S Coral</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">1.499.000đ</span>
+								<span class="price-new">1.499.000đ</span>
+							</div>
+							<div class="product-vali__sale">
+								<span>26%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="product1">
+			<div class="grid wide">
+				<div class="product1__title2">
+					<h2>PHỤ KIỆN NỔI BẬT NHẤT</h2>
+				</div>
+				<div class="row no-gutters">
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/phukien1.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Kakashi Lumi ZS9613_20 S Coral</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">1.499.000đ</span>
+								<span class="price-new">1.499.000đ</span>
+							</div>
+							<div class="product-vali__sale">
+								<span>26%</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/phukien2.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Beatas JP20_20 S Black</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">2.690.000đ</span>
+								<span class="price-new">4.580.000đ</span>
+							</div>
+							<div class="product-vali__sale">
+								<span>26%</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/phukien3.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Kakashi Lumi ZS9613_20 S Coral</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">1.499.000đ</span>
+								<span class="price-new">1.499.000đ</span>
+							</div>
+							<div class="product-vali__sale">
+								<span>26%</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="product1-vali">
+							<div class="product1-vali__img" >
+								<img src="./asset/img/phukien4.jpg" alt="">
+							</div>
+							<div class="product1-vali__title">
+								<span>Kakashi Lumi ZS9613_20 S Coral</span>
+							</div>
+							<div class="product-vali__price">
+								<span class="price-old">1.499.000đ</span>
+								<span class="price-new">1.499.000đ</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="product2">
+			<div class="grid wide">
+				<div class="product1__title3">
+						<h2>TIN TỨC</h2>
+				</div>
+				<div class="row no-gutters">
+					<div class="col l-6 m-12 c-12">
+						<div class="product2__img">
+							<img src="./asset/img/hD.jpg" alt="">
+						</div>
+					</div>
+					<div class="col l-6 m-12 c-12">
+						<div class="product2__box">	
+							<div class="product2__text1">
+									<img src="./asset/img/tintuc1.jpg" alt="">
+									<p>Chinh phục ngay 7 đỉnh núi dân trekking thứ thiệt không thể bỏ qua </p>
+									<span>30-09-2020</span>
+							</div>
+							<div class="product2__text2">
+								<img src="./asset/img/tintuc2.jpg" alt="">
+								<p>Chinh phục ngay 7 đỉnh núi dân trekking thứ thiệt không thể bỏ qua </p>
+								<span>30-09-2020</span>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>	
+		</div>	
+		<div class="star">
+			<div class="star__title">
+				<h2>SAO VIỆT MUA SẮM TẠI MIA.vn</h2>
+			</div>	
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			      <div class="swiper-slide">
+			      	<div class="feedback">
+			      		<img src="./asset/img/feedback2.jpg" alt="">
+			      		<p>Ninh Dương Lan Ngọc</p>
+			      	</div>
+			      </div>
+			      <div class="swiper-slide">
+			      	<div class="feedback">
+			      		<img src="./asset/img/feedback2.jpg" alt="">
+			      		<p>Ninh Dương Lan Ngọc</p>
+			      	</div>
+			      </div>
+			      <div class="swiper-slide">
+			      	<div class="feedback">
+			      		<img src="./asset/img/feedback2.jpg" alt="">
+			      		<p>Ninh Dương Lan Ngọc</p>
+			      	</div>
+			      </div>
+			      <div class="swiper-slide">
+			      	<div class="feedback">
+			      		<img src="./asset/img/feedback2.jpg" alt="">
+			      		<p>Ninh Dương Lan Ngọc</p>
+			      	</div>
+			      </div>
+			      <div class="swiper-slide">
+			      	<div class="feedback">
+			      		<img src="./asset/img/feedback2.jpg" alt="">
+			      		<p>Ninh Dương Lan Ngọc</p>
+			      	</div>
+			      </div>
+			      <div class="swiper-slide">
+			      	<div class="feedback">
+			      		<img src="./asset/img/feedback2.jpg" alt="">
+			      		<p>Ninh Dương Lan Ngọc</p>
+			      	</div>
+			      </div>
+			      <div class="swiper-slide">
+			      	<div class="feedback">
+			      		<img src="./asset/img/feedback2.jpg" alt="">
+			      		<p>Ninh Dương Lan Ngọc</p>
+			      	</div>
+			      </div>
+			      <div class="swiper-slide">
+			      	<div class="feedback">
+			      		<img src="./asset/img/feedback2.jpg" alt="">
+			      		<p>Ninh Dương Lan Ngọc</p>
+			      	</div>
+			      </div>
+			    </div>
+  			</div>
+				 													
+		</div>
+		<footer class="footer">
+		<div class="footer__reputation">
+			<div class="grid wide">
+				<div class="row">
+					<div class="col l-3">
+						<div class="reputation--col">
+							<div class="reputation--col__img">
+								<img src="./asset/img/footer1.png" alt="">
+							</div>
+							<div class="reputation--col__text">
+								<span>
+									BẢO HÀNH TRỌN ĐỜI TRÊN TOÀN QUỐC
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3">
+						<div class="reputation--col">
+							<div class="reputation--col__img">
+								<img src="./asset/img/footer2.png" alt="">
+							</div>
+							<div class="reputation--col__text">
+								<span>
+									MIỄN PHÍ ĐỔI TRẢ 365 NGÀY
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3">
+						<div class="reputation--col">
+							<div class="reputation--col__img">
+								<img src="./asset/img/footer3.png" alt="">
+							</div>
+							<div class="reputation--col__text">
+								<span>
+									MIỄN PHÍ BẢO HÀNH ĐẾN 10 NĂM
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col l-3">
+						<div class="reputation--col">
+							<div class="reputation--col__img">
+								<img src="./asset/img/footer4.png" alt="">
+							</div>
+							<div class="reputation--col__text">
+								<span>
+									CAM KẾT HÀNG CHÍNH HÃNG 100%
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__main">
+			<div class="grid wide">
+				<div class="row">
+					<div class="col l-3 m-6 c-12">
+						<div class="main--col">
+							<ul class="main--col__list">
+								<li class="main--col__item">
+									<h4 class="main--col__header">Gọi mua hàng</h4>
+								</li>
+								<li class="main--col__item">
+									<a href="" class="main--col__link">1800 6198 (miễn phí)</a>
+									<span>(08:00-22:00 tất cả các ngày trong tuần)</span>
+								</li>
+								<li class="main--col__item">
+									<h4 class="main--col__header">GÓP Ý - KHIẾU NẠI</h4>
+								</li>
+								<li class="main--col__item">
+									<a href="" class="main--col__link">1800 6198 (miễn phí)</a>
+									<span>(08:00-22:00 tất cả các ngày trong tuần)</span>
+								</li>
+								<li class="main--col__item">
+									<h4 class="main--col__header">KHÁCH B2B - DOANH NGHIỆP</h4>
+								</li>
+								<li class="main--col__item">
+									<p>Email: tien.ngo@tga.com.vn</p>
+									<span>Phone: 0919 555 909</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="main--col">
+							<ul class="main--col__list">
+								<li class="main--col__item">
+									<a href="" class="main--col__links">Hệ thống siêu thị</a>
+								</li>
+								<li class="main--col__item">
+									<a href="" class="main--col__links">Chính sách khách hàng thân thiết</a>
+								</li>
+								<li class="main--col__item">
+									<a href="" class="main--col__links">Chính sách đổi trả</a>
+								</li>
+								<li class="main--col__item">
+									<a href="" class="main--col__links">Chính sách bảo hành</a>
+								</li>
+								<li class="main--col__item">
+									<a href="" class="main--col__links">Chính sách vận chuyển</a>
+								</li>
+								<li class="main--col__item">
+									<a href="" class="main--col__links">Phương thức thanh toán</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="main--col">
+							<ul class="main--col__list">
+								<li class="main--col__item">
+									<a href="" class="main--col__links">Hướng dẫn sử dụng khóa Vali</a>
+								</li>
+								<li class="main--col__item">
+									<a href="" class="main--col__links">Hướng dẫn sử dụng mã voucher</a>
+								</li>
+								<li class="main--col__item">
+									<a href="" class="main--col__links">Mua hàng B2B - doanh nghiệp</a>
+								</li>
+								<li class="main--col__item">
+									<a href="" class="main--col__links">Giới thiệu MIA.vn</a>
+								</li>
+								<li class="main--col__item">
+									<a href="" class="main--col__links">Chính sách bảo mật</a>
+								</li>
+								<li class="main--col__item">
+									<a href="" class="main--col__links">Tuyển dụng</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col l-3 m-6 c-12">
+						<div class="main--col">
+							<div class="main--social">
+								<i class="fab fa-facebook-square"></i>
+								<i class="fab fa-youtube"></i>
+							</div>
+							<div class="main--img">
+								<h5>Website cùng hệ thống</h5>
+								<a href="">
+									<img src="./asset/img/web1.jpg" alt="">
+								</a>
+								<a href="">
+									<img src="./asset/img/web2.jpg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>	
+	</div>
+	
+	<script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+  <!-- js for menu -->
+	<script>
+		var MenuItems= document.getElementById("MenuItems");
+		MenuItems.style.maxHeight= "0px";
+		function menutoggle(){
+			if(MenuItems.style.maxHeight== "0px"){
+				MenuItems.style.maxHeight= "500px";
+			}
+			else{
+				MenuItems.style.maxHeight= "0px";
+			}
+		}
+	</script>
+</body>
+</html>
